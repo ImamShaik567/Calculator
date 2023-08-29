@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Mini Calculator</title>
+        <link rel="stylesheet" href="newone.css">
+        <script>
+            function sum()
+            {
+                var a=Number(document.getElementById("x").value);
+                var b=Number(document.getElementById("y").value);
+                var add= a+b;
+                document.getElementById("add").value= String(add);
+            }
+            function sub()
+            {
+                var a=Number(document.getElementById("x").value);
+                var b=Number(document.getElementById("y").value);
+                var add= a-b;
+                document.getElementById("add").value= String(add);
+            }
+            function mul()
+            {
+                var a=Number(document.getElementById("x").value);
+                var b=Number(document.getElementById("y").value);
+                var add= a*b;
+                document.getElementById("add").value= String(add);
+            }
+            function div()
+            {
+                var a=Number(document.getElementById("x").value);
+                var b=Number(document.getElementById("y").value);
+                var add= a/b;
+                document.getElementById("add").value= String(add);
+            }
+            function reset()
+            {
+                document.getElementById("x").value="0";
+                document.getElementById("y").value="0";
+                document.getElementById("add").value="0";
+            }
+        </script>
+    </head>
+    <body>
+    <div class="middle">
+    <div class="bg_color">
+        <h1 class="heading">Mini Calculator</h1>
+        <input type="text" id="x" placeholder="Enter a value"/><br><br>
+        <input type="text" id="y" placeholder="Enter b value"/><br><br>
+        <input type="text" id="add" placeholder="Enter result" disabled/><br><br>
+        <input type="button" value="+" onclick="sum()" class="one"/>&nbsp &nbsp;
+        <input type="button" value="-" onclick="sub()" class="second"/>&nbsp &nbsp;
+        <input type="button" value="*" onclick="mul()" class="third"/>&nbsp &nbsp;
+        <input type="button" value="/" onclick="div()" class="fourth"/><br><br>
+        <input type="button" value="clear" onclick="reset()"/>      
+    </div>
+    </div>
+    </body>
+</html>
